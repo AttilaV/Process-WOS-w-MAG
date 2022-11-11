@@ -1,0 +1,7 @@
+wos_data_dir: "/gpfs/sciencegenome/WOS/"
+mag_data_dir: "/gpfs/sciencegenome/MAG/mag-2021-08-02/mag/"
+wos_processed_dir: "/data2/sg/atvarga/WOS_SCI"
+wos_mag_match_dir: "/gpfs/sciencegenome/WOS2MAG/WOS_MAG_match"
+
+
+

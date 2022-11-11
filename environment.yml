@@ -1,0 +1,10 @@
+
+dependencies:
+  - tqdm
+  - dbgz
+  - sys
+  - tqdm
+  - numpy
+  - pickle
+  - itertools
+  
