@@ -1,7 +1,9 @@
 # General description
+
 Creates WOS paper (or any other entry type) level datasets from .bgz formatted raw WOS file. Outputs are lists. Disambiguated authors for WOS is imported form MAG. Provides matched MAG and WOS paper IDs as well. Applies filtering variables on papers. Python files can be run as standalone scripts or as a snakemake process. 
 
 # process_wos.py
+
 Provides various paper/publication level information in lists from raw WOS file. Enables filtering of records:
 - collections_filter: List of collections to include. Science Citation Index is "WOS.SCI". If empty, no filtering.
 - docutypes_filter: List of document types such as "Article","Letter", "Proceedings paper". If empty, no filtering.
@@ -11,6 +13,7 @@ Provides various paper/publication level information in lists from raw WOS file.
 - zeroyear_filter: First year to include.
 - endyear_filter: Last year to include.
 - minRef_filter: Minimum number of references by the paper needed to include the paper. If a paper has too few references it is filtered out.
+
 The outputs are the followings:
 - wosid2index: Dictionary of WOS publication ids and list indices. The key is the WOS id, and the value is the index pertaining to that record. The index identifies the position of the publication record in the rest of the output (lists).  The number of records in the BGZ files is N. The indices run from 0 to N-1.
 - index2issn: ISSN
@@ -44,6 +47,8 @@ Matching algorithm for papers between MAG and WOS. Matching is based on DOIs, ti
 1) If DOI match is found, and only one ID is associated with the DOI in both datasets, use that.
 2) If periodical information (bibliographic info) match is found, and only one ID is associated with that bibliographic ID in both datasets, use that.
 3) If title match is found, and only one ID is associated with the title in both datasets, use that.
+
+Outputs:
 - WOS2MAG: WOS paper ids matched to MAG paper ids. Dictionary.
 - WOSpaper2MAGauthor: WOS paper ids as keys, and MAG author ids as values. Authors maybe repeated, if author has several affiliations in MAG data.
 - WOSpaper2MAGcountry: WOS paper ids as keys, and country affiliation of authors as values. "XX" represents missing data. Authors maybe repeated, if author has several affiliations in MAG data.
