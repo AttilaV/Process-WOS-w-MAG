@@ -1,5 +1,5 @@
 # General description
-Creates WOS paper (or any other entry type) level datasets from .bgz formatted raw WOS file. Outputs are lists. Disambiguated authors for WOS is imported form MAG. Provides matched MAG and WOS paper IDs as well. Applies filtering variables on papers. Python files can be run as standalone scripts or as a snakemake process. WARNING: It might not able to save the entire output of process_wos.py, index2refs should be processed separately, due to memory overload.
+Creates WOS paper (or any other entry type) level datasets from .bgz formatted raw WOS file. Outputs are lists. Disambiguated authors for WOS is imported form MAG. Provides matched MAG and WOS paper IDs as well. Applies filtering variables on papers. Python files can be run as standalone scripts or as a snakemake process. 
 
 # process_wos.py
 Provides various paper/publication level information in lists from raw WOS file. Enables filtering of records:
