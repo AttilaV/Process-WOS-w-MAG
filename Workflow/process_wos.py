@@ -187,7 +187,7 @@ def arange_wos_entries(WOSentry):
         if isinstance(Authors, list) == False and isinstance(Authors, tuple) == False:
             Authors = [Authors]
         for au in Authors:
-            if "last_name" in au and "first_name" in au:
+            if "last_name" in au and "first_name" in au and au["@role"] == "author":
                 addr_no = ""
                 if '@addr_no' in au:
                     addr_no = str(remove_Nones(au['@addr_no']))
